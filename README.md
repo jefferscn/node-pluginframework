@@ -10,10 +10,13 @@ An extension project of nodejs express framework.
  A module is made up with routes,views and an init.js file.
  
 # Dependencies
-
- * JugglingDB
- * Express
- * Underscore
+ 1. ServerSide
+  * JugglingDB
+  * Express
+  * Underscore
+ 2. ClientSide
+  * JQuery
+  * Underscore
  
 # Usage
 
