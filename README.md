@@ -17,8 +17,8 @@ An extension project of nodejs express framework.
  
 # Usage
 
- * Download this project as a nodejs module.I will put it to node stable later.
  * Do everything Express need.
+ * Download this project as a nodejs module.And copy all the files to the root dir of Express.
  * Make database config,a config of jugglingdb,put everywhere of the project.
   just like below
  ```javascript
