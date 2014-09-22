@@ -55,3 +55,9 @@ An extension project of nodejs express framework.
 
  ```
     
+# Test
+
+ There are several plugins in this project.After server started,u can visit host/site/pluginlistpage 
+ to list all the serverside plugins.
+ 
+# How to develop plugin
