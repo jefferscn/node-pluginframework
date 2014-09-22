@@ -1,0 +1,21 @@
+<div class="panel panel-default">
+  <div class="panel-heading">Plugin List</div>
+  <table class="table">
+  	<thead>
+  		<tr>
+  			<th>name</th>
+  			<th>status</th>
+  			<th>lasterror</th>
+  		</tr>
+  	</thead>
+  	<tbody>
+  		<% plugins.forEach(function(plugin) { %>
+  			<tr>
+  				<td><a href='/site/plugindetailpage?plugin=<%= plugin.name%>'><%= plugin['name'] %></a></td>
+  				<td><%= plugin['status'] %></td>
+  				<td><%= plugin['msg'] %></td>
+  			</tr>
+  		<% }) %>
+  	</tbody>
+  </table>
+</div>

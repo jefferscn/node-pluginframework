@@ -1,0 +1,37 @@
+<h3><%= plugin.name %></h3>
+<div class="panel-heading">Widget List</div>
+  <table class="table">
+  	<thead>
+  		<tr>
+  			<th>name</th>
+  			<th>test</th>
+  		</tr>
+  	</thead>
+  	<tbody>
+  		<% widgets.forEach(function(widget) { %>
+  			<tr>
+  				<td><%= widget['name'] %></td>
+  				<td><a href='<%= widget.url%>'>access</td>
+  			</tr>
+  		<% }) %>
+  	</tbody>
+  </table>
+</div>
+<div class="panel-heading">Page List</div>
+  <table class="table">
+  	<thead>
+  		<tr>
+  			<th>name</th>
+  			<th>test</th>
+  		</tr>
+  	</thead>
+  	<tbody>
+  		<% pages.forEach(function(page) { %>
+  			<tr>
+  				<td><%= page['name'] %></td>
+  				<td><a href='<%= page.url%>'>access</td>
+  			</tr>
+  		<% }) %>
+  	</tbody>
+  </table>
+</div>

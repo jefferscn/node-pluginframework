@@ -1,0 +1,59 @@
+<div class="row">
+<div class='col-xs-12 col-sm-12 col-md-12'>
+		<div id='login-panel' class='panel panel-primary'>
+		    <div class='panel-heading'>
+				<h3 class='panel-title'> 登录</h3>
+		    </div>
+			<form id='login-form' action="/action/auth" method="post" role="form">
+			    <div class='panel-body'>
+					<div class="row">
+						<div class='col-xs-12 col-sm-12 col-md-4 login-box'>
+								<div style="display:none">
+									<input type="hidden" value="<%= url %>" name="redirecturl">
+								</div>
+								<% if(locals.errMsg) { %>
+									<div class='alert alert-danger'>
+										<%= errMsg %>
+									</div>
+								<% } %>
+								<div class="form-group">
+									<div class='input-group'>
+										<span class='input-group-addon'>
+											<span class='glyphicon glyphicon-user'></span>
+										</span>
+										<input id='id_login' class='form-control' type='text' autofocus required placeholder="" name='user'/>
+									</div>
+								</div>
+								<div class="form-group">
+									<div class='input-group'>
+										<span class='input-group-addon'>
+											<span class='glyphicon glyphicon-lock'></span>
+										</span>
+										<input id='id_password' class='form-control' type='password' placeholder="密码" name='password'/>
+									</div>
+								</div>
+						</div>
+					</div>
+			    </div>
+			   				</form>
+			    <div class='panel-footer'>
+					<div class='row'>
+						<div class='col-xs-6 col-sm-6 col-md-6'>
+							<button class='btn btn-labeled btn-success' onclick='submitLogin()'>
+								<script>
+									function submitLogin(){
+										submitForm('loginform','login-form','<%= target %>');
+									}
+								</script>
+								<span class='btn-label'>
+									<i class='glyphicon glyphicon-ok'></i>
+								</span>	
+								登录
+							</button>
+						</div>
+					</div>
+			    </div>
+
+		</div>
+</div>
+</div>

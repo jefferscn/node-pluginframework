@@ -1,0 +1,9 @@
+<a href="#" onclick="<%= logined?'doLogout()':'doLogin()' %>;return false;"><%= logined?'Logout':'Login'%></a>
+<script>
+	function doLogin(){
+		window.location='/site/loginpage?url=' + encodeURIComponent(window.location);
+	}
+	function doLogout(){
+		window.location='/widget/logout?url=' + encodeURIComponent(window.location);
+	}
+</script>

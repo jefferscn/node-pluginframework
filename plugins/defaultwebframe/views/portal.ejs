@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  	<meta http-equiv="X-UA-Compatible" content="IE=8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Node Plugin Framework</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <!--[if lt IE 9]>
+      <script src="/javascripts/html5shiv.js"></script>
+      <script src="/javascripts/respond.min.js"></script>
+    <![endif]-->
+    <script src='/jquery/js/jquery-1.9.1.js'></script>
+    <script src="/javascripts/underscore-min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    
+    <script src="/javascripts/access.js"></script>
+  </head>
+  <body>
+  	<a class="sr-only" href="#content">Skip to main content</a>
+	<div class='navbar navbar-default navbar-fixed-top' role='banner'>
+		<div class='container'>
+		    <div class='navbar-header'>
+		    	<a class='navbar-brand' href="/">Plugin Framework</a> 
+		    </div>
+			<div class='collapse navbar-collapse bs-navbar-collapse' role="navigation">
+			    <ul class='nav navbar-nav'>
+			    <% for(var item in navleft) { %>
+			    	<li id='navleft-<%= item %>'>
+			    		
+			    	</li>
+			    	<script>
+			    		renderWidget('navaleft-<%= item %>',<%= item %>);
+			    	</script>
+			    <% } %>
+			    </ul>
+			    <ul class='nav navbar-nav navbar-right'>
+		    	<% navright.forEach(function(item) { %>
+			    	<li id='navright-<%= item %>'>
+			    		
+			    	</li>
+			    	<script>
+		    			renderWidget('navright-' + '<%= item %>','<%= item %>');
+		    		</script>
+			    <% }) %>
+			    </ul>
+			</div>
+		</div>
+	</div>
+	<div id='main_content' class='container'>
+
+	</div>
+	<script>
+		renderWidget('main_content','<%= content %>')
+	</script>
+  </body>
+</html>
