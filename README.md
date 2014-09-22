@@ -38,4 +38,20 @@ An extension project of nodejs express framework.
 
  ```
  * Do some change in app.js
+ ```javascript
+    var proto=require('underscore');
+    var extApp = require('application');
+    var app =new express();
+
+    app.set('db', path.join(__dirname, 'model/db'));
+    ...
+    app.use(express.cookieParser());
+    app.use(express.session({ secret: "pluginframework" ,cookie:{maxAge:5*60*60*1000}}));
+    ...
+    app.initPluginSystem(function(){
+	
+    });
+    ...
+
+ ```
     
