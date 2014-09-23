@@ -7,7 +7,7 @@ An extension project of nodejs express framework.
  In developing a web application,there will be a mass of views,routes.With default usage of Express,
  everything is mixed together.This is not conducive to reuse and  maintenance of code.
  This project will build a framework to build a Express with seperated modules(pluings).
- A module is made up with routes,views and an init.js file.
+ A module is made up with logic(routes),views and an init.js file.
  
 # Dependencies
  1. ServerSide
@@ -60,4 +60,27 @@ An extension project of nodejs express framework.
  There are several plugins in this project.After server started,u can visit host/site/pluginlistpage 
  to list all the serverside plugins.
  
-# How to develop plugin
+# Plugin Description
+
+## account 
+   A plugin provide simple security service.
+  * data
+    * user
+  * view
+    * site/loginpage
+    * site/usermanager
+    * widget/loginform
+    * widget/logininfo
+    * widget/loginout
+    
+## defaultwebframe
+   A plugin provide the web frame,include the main page of website.
+   This plugin just set the defaultLayout of application.
+
+## pluginMgr
+   A plugin provide maintance of the server plugins.
+  * view
+   * /site/pluginlistpage
+   * /site/plugindetailpage
+   * /widget/pluginlist
+   * /widget/plugindetail
